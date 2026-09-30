@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uzair Sheikh | Graphic Designer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #f5f2ea;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+nav {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    background: rgba(11,11,11,0.95);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #b79b68;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.contact-btn {
+    border: 1px solid #555;
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    padding: 12vh 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-title {
+    color: #b79b68;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: 0.95;
+    margin: 25px 0;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #b79b68;
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 580px;
+    color: #999;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.primary {
+    background: #f5f2ea;
+    color: #111;
+    padding: 15px 24px;
+    border-radius: 30px;
+}
+
+.secondary {
+    color: #aaa;
+}
+
+.line {
+    margin-top: 100px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 110px 7%;
+}
+
+.section-label {
+    color: #b79b68;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.section-title {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 6vw, 80px);
+    margin: 15px 0 50px;
+}
+
+.section-title span {
+    color: #b79b68;
+    font-style: italic;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    border-top: 1px solid #252525;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+}
+
+.project {
+    cursor: pointer;
+}
+
+.project-image {
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #292929;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.project:hover .project-image {
+    transform: translateY(-7px);
+}
+
+.project-image h3 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+}
+
+.project-image p {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.project:nth-child(1) .project-image {
+    background: radial-gradient(circle, #66543a, #111);
+}
+
+.project:nth-child(2) .project-image {
+    background: linear-gradient(135deg, #493b36, #111);
+}
+
+.project:nth-child(3) .project-image {
+    background: radial-gradient(circle, #41545d, #0b1012);
+}
+
+.project:nth-child(4) .project-image {
+    background: linear-gradient(135deg, #625768, #121014);
+}
+
+.project:nth-child(5) .project-image {
+    background: linear-gradient(135deg, #28413c, #090e0d);
+}
+
+.project:nth-child(6) .project-image {
+    background: radial-gradient(circle, #554b59, #111);
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.project-info span {
+    color: #777;
+    font-size: 12px;
+}
+
+/* ABOUT */
+
+.about {
+    border-top: 1px solid #252525;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10%;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 65px;
+}
+
+.about h2 span {
+    color: #b79b68;
+}
+
+.about p {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 45px;
+}
+
+.skill {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.skill strong {
+    color: #b79b68;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* SERVICES */
+
+.services {
+    border-top: 1px solid #252525;
+}
+
+.service {
+    border-top: 1px solid #333;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    gap: 20px;
+}
+
+.service:last-child {
+    border-bottom: 1px solid #333;
+}
+
+.service-number {
+    color: #b79b68;
+}
+
+.service h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.service p {
+    color: #888;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #151515;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(50px, 8vw, 105px);
+    margin: 25px 0 40px;
+}
+
+.contact h2 span {
+    color: #b79b68;
+}
+
+.email {
+    font-size: 20px;
+    border-bottom: 1px solid #b79b68;
+    padding-bottom: 5px;
+}
+
+.socials {
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    color: #888;
+}
+
+footer {
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 11px;
+    border-top: 1px solid #292929;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 90px 7%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    section {
+        padding: 75px 6%;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .about h2 {
+        margin-bottom: 35px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .service p {
+        grid-column: 2;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        display: block;
+        line-height: 2;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#" class="logo">UZ<span>AIR</span></a>
+
+    <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="contact-btn">Let's Talk ↗</a>
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="small-title">
+        GRAPHIC DESIGNER · AI CREATOR · DIGITAL CREATOR
+    </div>
+
+    <h1>
+        Forging ideas<br>
+        <span>into visual stories.</span>
+    </h1>
+
+    <p>
+        I create bold identities, campaigns and digital visuals
+        that help brands look distinctive and feel memorable.
+    </p>
+
+    <div class="buttons">
+        <a href="#work" class="primary">Explore My Work ↓</a>
+        <a href="#about" class="secondary">About me ↗</a>
+    </div>
+
+    <div class="line">
+        <span>SELECTED WORK</span>
+        <span>2026 — PRESENT</span>
+    </div>
+
+</section>
+
+
+<section class="portfolio" id="work">
+
+    <div class="section-label">01 / PORTFOLIO</div>
+
+    <h2 class="section-title">
+        Selected <span>work.</span>
+    </h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <div class="project-image">
+                <h3>RIWAAYAT</h3>
+                <p>PREMIUM RESTAURANT IDENTITY</p>
+            </div>
+            <div class="project-info">
+                <strong>Riwaayat</strong>
+                <span>Brand Identity</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <h3>VIRELLE</h3>
+                <p>GLOW · RADIANCE · CARE</p>
+            </div>
+            <div class="project-info">
+                <strong>Virelle</strong>
+                <span>Beauty Campaign</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <h3>NOVIQ</h3>
+                <p>SMARTER EVERYDAY</p>
+            </div>
+            <div class="project-info">
+                <strong>Noviq</strong>
+                <span>Creative Campaign</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <h3>NELVIX</h3>
+                <p>HAIRCARE · BRAND IDENTITY</p>
+            </div>
+            <div class="project-info">
+                <strong>Nelvix</strong>
+                <span>Packaging & Identity</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <h3>NOBLIX</h3>
+                <p>MOVE BEYOND TOMORROW</p>
+            </div>
+            <div class="project-info">
+                <strong>Noblix</strong>
+                <span>Mobility Expo</span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <h3>VYORA</h3>
+                <p>TRAIN · BALANCE · LIVE</p>
+            </div>
+            <div class="project-info">
+                <strong>Vyora</strong>
+                <span>Fitness Campaign</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="about" id="about">
+
+    <div>
+        <div class="section-label">02 / ABOUT</div>
+    </div>
+
+    <div>
+
+        <h2>
+            Design with <span>purpose.</span>
+        </h2>
+
+        <p>
+            I'm Uzair Sheikh, a graphic designer and digital creator
+            focused on building premium visual experiences for modern brands.
+        </p>
+
+        <p>
+            From a logo system to a complete social media campaign,
+            I combine design thinking, visual storytelling and
+            AI-assisted creativity to turn ideas into polished visuals.
+        </p>
+
+        <div class="skills">
+
+            <div class="skill">
+                <strong>01</strong>
+                Brand Identity
+            </div>
+
+            <div class="skill">
+                <strong>02</strong>
+                Social Campaigns
+            </div>
+
+            <div class="skill">
+                <strong>03</strong>
+                Packaging
+            </div>
+
+            <div class="skill">
+                <strong>04</strong>
+                Advertising
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="services" id="services">
+
+    <div class="section-label">03 / SERVICES</div>
+
+    <h2 class="section-title">
+        What I <span>create.</span>
+    </h2>
+
+    <div class="service">
+        <span class="service-number">01</span>
+        <h3>Brand Identity</h3>
+        <p>Logos, typography, color systems and complete brand visuals.</p>
+    </div>
+
+    <div class="service">
+        <span class="service-number">02</span>
+        <h3>Social Media Design</h3>
+        <p>Campaigns and scroll-stopping content built for digital platforms.</p>
+    </div>
+
+    <div class="service">
+        <span class="service-number">03</span>
+        <h3>Packaging Design</h3>
+        <p>Premium packaging concepts that make products stand out.</p>
+    </div>
+
+    <div class="service">
+        <span class="service-number">04</span>
+        <h3>Creative Advertising</h3>
+        <p>Concept-driven advertising visuals with a strong creative hook.</p>
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <div class="section-label">04 / CONTACT</div>
+
+    <h2>
+        Have an idea?<br>
+        <span>Let's make it visual.</span>
+    </h2>
+
+    <a href="mailto:your@email.com" class="email">
+        your@email.com ↗
+    </a>
+
+    <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">Dribbble</a>
+        <a href="#">Facebook</a>
+    </div>
+
+</section>
+
+
+<footer>
+    <span>© 2026 Uzair Sheikh</span>
+    <span>Graphic Designer · AI Creator</span>
+</footer>
+
+</body>
+</html>
