@@ -48,12 +48,32 @@ nav {
 nav::after {
     content: "";
     position: absolute;
-    top: -8px;
-    right: -2%;
+    top: -25%;
+    right: -5%;
     width: 58%;
-    height: 115%;
+    height: 150%;
     background: #7A1F5C;
+    border-radius: 55% 0 0 55%;
+    transform: skewX(-8deg);
+    z-index: 0;
+    pointer-events: none;
+}
 
+.logo,
+.nav-links,
+.contact-btn {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-links a {
+    color: #0B2D5C;
+}
+
+.contact-btn {
+    color: #FFFFFF;
+    background: #0B2D5C;
+}
     clip-path: polygon(
         12% 0%,
         18% 4%,
